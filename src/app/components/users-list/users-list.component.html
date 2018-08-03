@@ -1,0 +1,9 @@
+<h6 class="text-center">Users</h6>
+<table class="table table-sm table-hover">
+  <th>Email</th>
+  <th>Name</th>
+  <tr *ngFor="let user of usersList">
+    <td>{{user.email}}</td>
+    <td>{{user.name}}</td>
+  </tr>
+</table>
