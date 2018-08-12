@@ -1,0 +1,17 @@
+
+<table class="table table-sm table-hover">
+  <th>Address</th>
+  <th>Date</th>
+  <th>Hour</th>
+  <th>Payer</th>
+  <th>Products</th>
+  <th>Town</th>
+  <tr *ngFor="let order of ordersList">
+    <td>{{order.direccion}}</td>
+    <td>{{order.fecha_pedido}}</td>
+    <td>{{order.hora_pedido}}</td>
+    <td>{{order.ordenante}}</td>
+    <td>{{order.productosString}}</td>
+    <td>{{order.pueblo}}</td>
+  </tr>
+</table>

@@ -10,7 +10,11 @@ import { UsersListComponent } from './components/users-list/users-list.component
 import { environment } from '../environments/environment';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import {UsersService} from './services/users.service'
+import { UsersService } from './services/users.service';
+import { ProductsService } from './services/products.service';
+import { OrdersService } from './services/orders.service';
+import { ProductsListComponent } from './components/products-list/products-list.component';
+import { OrdersListComponent } from './components/orders-list/orders-list.component'
 const appRoutes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
@@ -22,7 +26,9 @@ const appRoutes: Routes = [
     AppComponent,
     DashboardComponent,
     LoginComponent,
-    UsersListComponent
+    UsersListComponent,
+    ProductsListComponent,
+    OrdersListComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +36,7 @@ const appRoutes: Routes = [
     AngularFireDatabaseModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [UsersService],
+  providers: [UsersService, ProductsService, OrdersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

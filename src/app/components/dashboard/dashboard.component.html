@@ -1,11 +1,61 @@
 <div class="text-center">
-
-  <h2 class="jumbotron">User Register</h2>
+  <h2 class="jumbotron">Dashboard</h2>
 </div>
-<div class="row">
-  <div class="col-md-7">
-  </div>
-  <div class="col-md-5">
+<!-- <div class="row">
+  <div class="col-md-10">
   <app-users-list></app-users-list>
+  <app-products-list></app-products-list>
+  <app-orders-list></app-orders-list>
 </div>
-</div>
+</div> -->
+
+
+<!-- <div class="main-panel"> -->
+  <div id="accordion" class="accordion">
+
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+        <button class="btn btn-lg btn-block btn-success" type="button" data-toggle="collapse"  data-target="#collapseUsers" aria-expanded="true" aria-controls="collapseUsers">
+          Users
+        </button>
+      </h5>
+      </div>
+      <div class="collapse show" id="collapseUsers"  data-parent="#accordion">
+        <div class="card-body">
+          <app-users-list></app-users-list>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+        <button class="btn btn-lg btn-block btn-success"  type="button" data-toggle="collapse"  data-target="#collapseProducts" aria-expanded="true" aria-controls="collapseProducts">
+          Products
+        </button>
+      </h5>
+      </div>
+      <div class="collapse show" id="collapseProducts"  data-parent="#accordion"  >
+        <div class=" card-body">
+          <app-products-list></app-products-list>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingThree" >
+        <h5 class="mb-0">
+        <button class="btn  btn-lg btn-block btn-success"  type="button" data-toggle="collapse" data-target="#collapseOrders" aria-expanded="true" aria-controls="collapseOrders">
+          Orders
+        </button>
+      </h5>
+      </div>
+      <div  id="collapseOrders" class="collapse show" data-parent="#accordion">
+        <div class=" card-body">
+          <app-orders-list></app-orders-list>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->
